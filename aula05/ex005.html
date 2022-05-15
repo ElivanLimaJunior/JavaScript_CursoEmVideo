@@ -9,11 +9,27 @@
 </head>
 <body>
     <h1>Iniciando estudos do DOM</h1>
-    <p>Aqui vai o resultado</p>
+    <p class="prgf1">Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
-        window.document.write()
+        var corpo = document.body
+        var p0 = document.querySelector('p.prgf1')
+        var p1 = document.getElementsByTagName('p')[1]
+        var d = document.querySelector('div#msg')
+ 
+        d.style.background = 'green'
+        //window.document.write('Agora: ' + msg.innerText)
+        //window.alert(msg.innerText)
+        d.innerText = 'Mudei sá porra ' + p1.innerText
+
+        // window.document.write('Aqui tem: ' + p1.innerHTML) // O innerHTML trás a estilização da tag junto.
+        p1.style.color = 'red'
+        p1.style.background = 'yellow'
+
+        //  window.alert(p1.innerText) se eu usar innerHTML no alerta, ele trás as tags no alerta. então é melhor usar o innerText.
+
+        corpo.style.background = 'black'
     </script>
 </body>
 </html>
