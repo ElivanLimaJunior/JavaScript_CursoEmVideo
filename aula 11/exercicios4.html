@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direcionamento</title>
+</head>
+<body>
+    <h1>Qual página deseja ir ?</h1>
+    <input type="text" name="idade" id="idade">
+    <input type="button" value="Confirmar" onclick="validar()">
+    <div id="res"></div>
+    
+    <script>
+        function validar () {
+            var idade = document.querySelector('input#idade')
+            var res = document.querySelector('div#res')
+            var ok = (idade.value)
+
+            res.innerHTML = ''
+            if (ok >= 18) {
+                res.innerHTML += `<p>Adulto</p>`
+            } else if (ok >= 16) {
+                res.innerHTML += `<p>Está perto de se tornar um adulto</p>`
+            } else if ( ok < 16) {
+                res.innerHTML += `<p>Você é muito novo</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

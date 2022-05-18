@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaforos</title>
+</head>
+<body>
+    <h1>Semaforos</h1>
+    <p>Qual é a cor do semaforo neste exato momento?</p>
+    <input type="text" name="cor" id="cor">
+    <input type="button" name="conf" id="conf" value="Confirme" onclick="CorDoSemaforo()">
+    <div id="res"></div>
+
+    <script>
+        function CorDoSemaforo () {
+            var texto = document.querySelector('input#cor')
+            var res = document.querySelector('div#res')
+            var p = (texto.value)
+            
+            res.innerHTML = `Sinal: ${p}`
+            if (p == 'Verde') {
+                res.innerHTML += `<p>Sinal aberto, pode passar.</p>`
+            } else if (p == 'Amarelo') {
+                res.innerHTML += `<p>Atenção!.</p>`
+            } else if (p == 'Vermelho') {
+                res.innerHTML += `<p>Pare! Sinal Fechado. </p>`
+            } else {
+                res.innerHTML += `<p>Parece que o semaforo está desligado.`
+            }
+        }
+
+    </script>
+</body>
+</html>

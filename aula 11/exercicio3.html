@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario Autenticado</title>
+</head>
+<body>
+    <h1>Digite sua conta</h1>
+    <input type="text" placeholder="Nome" name="login" id="login">
+    <input type="senha" placeholder="senha" name="senha" id="senha">
+    <input type="button" value="confirmar" onclick="confirmar()">
+    <div id="res"></div>
+    <script>
+        function confirmar () {
+            var login = document.querySelector('input#login')
+            var senha = document.querySelector('input#senha')
+            var res = document.querySelector('div#res')
+            var conf1 = (login.value)
+            var conf2 = (senha.value)
+
+            if (conf1 == 'Elivan' && conf2 == '123') {
+                res.innerHTML += `<p>Bem Vindo!</p>`
+            } else {
+                res.innerHTML += `<p>Login ou senha incorretos!</p>`
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
