@@ -7,7 +7,8 @@
     <title>Direcionamento</title>
 </head>
 <body>
-    <h1>Qual página deseja ir ?</h1>
+    <h1>Festa da noitada!</h1>
+    <p>Por favor, para entrar diga qual a sua idade:</p>
     <input type="text" name="idade" id="idade">
     <input type="button" value="Confirmar" onclick="validar()">
     <div id="res"></div>
@@ -20,11 +21,11 @@
 
             res.innerHTML = ''
             if (ok >= 18) {
-                res.innerHTML += `<p>Adulto</p>`
+                res.innerHTML += `<p>Você já é um Adulto, divirta-se!</p>`
             } else if (ok >= 16) {
-                res.innerHTML += `<p>Está perto de se tornar um adulto</p>`
+                res.innerHTML += `<p>Você ainda não fez 18 anos, sinto muito volte quando tiver na idade</p>`
             } else if ( ok < 16) {
-                res.innerHTML += `<p>Você é muito novo</p>`
+                res.innerHTML += `<p>Você é muito novo, vaza daqui!</p>`
             }
         }
     </script>
