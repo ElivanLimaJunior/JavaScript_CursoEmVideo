@@ -18,3 +18,4 @@ function tabuada() {
         }
     }
 }
+fun
