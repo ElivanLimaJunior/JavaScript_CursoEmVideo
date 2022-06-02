@@ -55,7 +55,8 @@ function finalizar() {
         let media = 0
 
         for(let pos in valores) {   // for in: criamos uma variavel que irá percorrer todos os valores dentro dentro do nosso vetor.
-            valores += valores[pos]
+            soma += valores[pos] // Ao percorrer a lista irá somar os valores.
+
             if(valores[pos] > maior) // aqui fazemos uma analise para achar o maior valor dentro do vetor.
             maior = valores[pos] //  Ao percorrer ele irá ver se o primeiro valor é maior que o prixmo até o final do vetor. se for ele irá colocar esse valor dentro da nossa variavel maior.
             if(valores[pos] < menor) { // Essa condição fará o mesmo do de cima, porém para achar o menor valor.
@@ -63,11 +64,17 @@ function finalizar() {
             }
         }
         // Texto que será mostrado na tela.
-
+        media = soma / tot
         res.innerHTML = ''
         res.innerHTML += `<p>Ato todo, temos ${tot} números cadastrados.</p>` // Aqui temos o texto para mostrar o nosso total de números no vetor valores.
         res.innerHTML += `<p>O maior valor informado é ${maior}.</p>`
         res.innerHTML += `<p>O menor valor informado é ${menor}.</p>`
         res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
+        res.innerHTML += `<p>A média dos valores digitados é ${media}.`
     }
+}
+
+function limpar() {
+    res.innerHTML = ''
+    valores = []
 }
