@@ -26,8 +26,17 @@ function adicionar() {
     // o segundo já entra para o segundo parametro da função inLista.
     
     if (isNumero(num.value) && !inlista(num.value, valores)) { // num.value é o valor dentro da variave. separado com a virgua e um espaço coloquei o nosso vetor "valores". Então o inlista irá passar o valor e os valores dentro do vetor. 
-        window.alert('Funcionando.')
+        valores.push(Number(num.value)) // .push para adicionar o Numero presente em num no nosso vetor valores.
+
+        // criando tag para dentro do nosso select.
+        let item = document.createElement('option') // Estamos criando uma tag option (Só criando, ainda não decidimos aqui para onde ela vai).
+        item.text = `Valor ${num.value} adicionado.` // aqui estamos setando qual o texto que essa tag irá receber.
+        lista.appendChild(item) // Aqui estamos adicionando a variavel item na nossa lista. (Dessa maneira temos o retorno visual no nosso site.).          AppendChild = Adicionar filho
+
     } else {
         window.alert('Valor inválido ou já encontrado na lista.')
     }
+    // A condição ser execultada:
+    num.value = '' // Nosso num vai ser limpo recebendo um valor vazio
+    num.focus() // .focus é o foco do nosso mouse, ou seja. . . ele irá voltar para dentro da caixa para digitarmos outro valor
 }
