@@ -1,0 +1,15 @@
+Continuar estudando conceitos mas avançados de JavaScript como:
+
+-HTML E CSS
+-Functions
+-elo function
+-callbacks
+-funções anônimas
+-IIFE
+-orientação a objetos
+-modularização
+-regEx(expressões regulares)
+-Json
+-AJAX
+-NodeJs
+-bibliotecas e frameworks (REACT.JS)
