@@ -1,6 +1,6 @@
 Continuar estudando conceitos mas avançados de JavaScript como:
 
--HTML E CSS
+-HTML E CSS - OK
 -Functions
 -elo function
 -callbacks
